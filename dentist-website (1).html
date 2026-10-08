@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Smile Care Dental Clinic | Dr. Your Name, BDS, MDS</title>
+<meta name="description" content="Gentle, modern dental care: check-ups, cleaning, root canal, braces, implants and smile makeovers. Book your appointment online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Nunito+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#12303B; --muted:#4F6872; --bg:#F4F9FA; --card:#FFFFFF;
+  --teal:#0E7C86; --teal-d:#0A5E66; --mint:#D3EEE8; --coral:#E4572E; --line:#D8E6E9;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Nunito Sans',system-ui,sans-serif;color:var(--ink);background:var(--bg);line-height:1.65;font-size:17px}
+h1,h2,h3{font-family:'Young Serif',Georgia,serif;font-weight:400;line-height:1.2}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+
+/* header */
+header{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+.nav{display:flex;align-items:center;justify-content:space-between;height:68px;gap:16px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-family:'Young Serif',serif;font-size:20px}
+.logo svg{width:30px;height:30px}
+nav ul{display:flex;gap:26px;list-style:none}
+nav a{text-decoration:none;font-weight:600;font-size:15px;color:var(--muted)}
+nav a:hover{color:var(--teal)}
+.btn{display:inline-block;background:var(--coral);color:#fff;text-decoration:none;font-weight:700;padding:12px 22px;border-radius:8px;border:0;font:inherit;font-weight:700;cursor:pointer}
+.btn:hover{background:#c9461f}
+.btn.alt{background:transparent;color:var(--teal);border:2px solid var(--teal)}
+.btn.alt:hover{background:var(--teal);color:#fff}
+
+/* hero */
+.hero{padding:64px 0 72px}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:48px;align-items:center}
+.hero h1{font-size:clamp(34px,5vw,54px);margin-bottom:18px}
+.hero p.lead{font-size:19px;color:var(--muted);max-width:50ch;margin-bottom:26px}
+.hero .actions{display:flex;gap:12px;flex-wrap:wrap}
+.facts{display:flex;gap:28px;margin-top:34px;flex-wrap:wrap;color:var(--muted);font-size:15px}
+.facts b{display:block;color:var(--ink);font-size:18px}
+.book{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:26px}
+.book h2{font-size:22px;margin-bottom:4px}
+.book p{color:var(--muted);font-size:15px;margin-bottom:16px}
+label{display:block;font-weight:600;font-size:14px;margin:12px 0 4px}
+input,select{width:100%;padding:11px 12px;border:1.5px solid var(--line);border-radius:8px;font:inherit;background:#fff;color:var(--ink)}
+input:focus,select:focus{border-color:var(--teal);outline:none}
+.book .btn{width:100%;margin-top:18px}
+.note{font-size:13px;color:var(--muted);margin-top:10px;text-align:center}
+
+/* sections */
+section{padding:72px 0}
+.head{max-width:60ch;margin-bottom:36px}
+.head h2{font-size:clamp(28px,3.4vw,38px);margin-bottom:10px}
+.head p{color:var(--muted)}
+.services{background:#fff;border-block:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.svc{padding:22px;border:1px solid var(--line);border-radius:12px;background:var(--bg)}
+.svc .ic{width:44px;height:44px;border-radius:10px;background:var(--mint);display:grid;place-items:center;margin-bottom:14px}
+.svc .ic svg{width:24px;height:24px;stroke:var(--teal-d);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.svc h3{font-size:19px;margin-bottom:6px}
+.svc p{color:var(--muted);font-size:15.5px}
+
+.about .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:center}
+.portrait{aspect-ratio:4/5;background:var(--mint);border-radius:14px;display:grid;place-items:center;text-align:center;color:var(--teal-d);padding:20px;font-weight:600}
+.about h2{font-size:clamp(28px,3.4vw,38px);margin-bottom:14px}
+.about p{color:var(--muted);margin-bottom:14px}
+.about ul{list-style:none;margin-top:18px}
+.about li{padding:8px 0 8px 28px;position:relative;border-bottom:1px solid var(--line)}
+.about li::before{content:"";position:absolute;left:2px;top:15px;width:12px;height:7px;border-left:3px solid var(--teal);border-bottom:3px solid var(--teal);transform:rotate(-45deg)}
+
+.reviews{background:var(--teal-d);color:#fff}
+.reviews .head p{color:#BEE3E0}
+.reviews .grid .q{background:rgba(255,255,255,.08);border-radius:12px;padding:22px}
+.q p{margin-bottom:12px}
+.q span{font-weight:700;font-size:15px;color:#BEE3E0}
+
+.faq details{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin-bottom:10px}
+.faq summary{font-weight:700;cursor:pointer}
+.faq details p{color:var(--muted);margin-top:8px}
+
+.contact{background:#fff;border-top:1px solid var(--line)}
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.contact h3{font-size:20px;margin-bottom:10px}
+.hours{width:100%;border-collapse:collapse}
+.hours td{padding:8px 0;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right;font-weight:600}
+.contact p{margin-bottom:10px;color:var(--muted)}
+.contact a{color:var(--teal);font-weight:700}
+.map{margin-top:14px;background:var(--bg);border:1px dashed var(--teal);border-radius:10px;padding:26px;text-align:center;color:var(--muted);font-size:14px}
+
+footer{background:var(--ink);color:#A9C0C7;text-align:center;padding:26px 20px;font-size:14px}
+
+.wa{position:fixed;right:18px;bottom:18px;background:#1FA855;color:#fff;border-radius:999px;padding:12px 18px;font-weight:700;text-decoration:none;box-shadow:0 4px 14px rgba(0,0,0,.2)}
+
+@media(max-width:860px){
+  nav ul{display:none}
+  .hero .wrap,.about .wrap,.contact .wrap{grid-template-columns:1fr}
+  .grid{grid-template-columns:1fr 1fr}
+  .portrait{aspect-ratio:16/10}
+}
+@media(max-width:560px){.grid{grid-template-columns:1fr}.nav .btn{padding:10px 14px;font-size:14px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#top" aria-label="Smile Care Dental Clinic home">
+      <svg viewBox="0 0 32 32" fill="none" stroke="#0E7C86" stroke-width="2.2" stroke-linejoin="round"><path d="M16 6c-2-2-8-2-9 3-1 5 2 7 2 11 0 3 1 6 3 6s2-4 4-4 2 4 4 4 3-3 3-6c0-4 3-6 2-11-1-5-7-5-9-3z"/></svg>
+      Smile Care
+    </a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#services">Treatments</a></li>
+        <li><a href="#about">About the doctor</a></li>
+        <li><a href="#reviews">Patient reviews</a></li>
+        <li><a href="#faq">Questions</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="btn" href="#book">Book appointment</a>
+  </div>
+</header>
+
+<main id="top">
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Dental care that doesn't hurt, from check-up to smile makeover</h1>
+      <p class="lead">Painless treatment, clear pricing and sterilised equipment for every patient. Visit Dr. Your Name and leave with a healthier, brighter smile.</p>
+      <div class="actions">
+        <a class="btn" href="#book">Book appointment</a>
+        <a class="btn alt" href="tel:+919999999999">Call +91 99999 99999</a>
+      </div>
+      <div class="facts">
+        <div><b>10+ years</b>of experience</div>
+        <div><b>5,000+</b>patients treated</div>
+        <div><b>4.9 / 5</b>patient rating</div>
+      </div>
+    </div>
+
+    <form class="book" id="book" aria-labelledby="bk">
+      <h2 id="bk">Book your visit</h2>
+      <p>Fill this in and we'll confirm your slot on WhatsApp.</p>
+      <label for="name">Your name</label>
+      <input id="name" required autocomplete="name">
+      <label for="phone">Phone number</label>
+      <input id="phone" type="tel" required autocomplete="tel">
+      <label for="svc">Treatment</label>
+      <select id="svc">
+        <option>Check-up and cleaning</option>
+        <option>Tooth pain / emergency</option>
+        <option>Root canal</option>
+        <option>Braces / aligners</option>
+        <option>Teeth whitening</option>
+        <option>Implants / dentures</option>
+        <option>Child dentistry</option>
+      </select>
+      <label for="date">Preferred date</label>
+      <input id="date" type="date" required>
+      <button class="btn" type="submit">Send on WhatsApp</button>
+      <p class="note">Open Mon to Sat, 10 am to 7 pm</p>
+    </form>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="wrap">
+    <div class="head">
+      <h2>Treatments we offer</h2>
+      <p>Everything your family needs, under one roof.</p>
+    </div>
+    <div class="grid">
+      <article class="svc"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-5-5"/></svg></div><h3>Check-up and cleaning</h3><p>Scaling and polishing to remove plaque and stains, with an exam to catch problems early.</p></article>
+      <article class="svc"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18"/></svg></div><h3>Root canal treatment</h3><p>Save a badly decayed tooth with a comfortable, usually single-visit procedure.</p></article>
+      <article class="svc"><div class="ic"><svg viewBox="0 0 24 24"><path d="M3 9h18M3 15h18M7 6v12M17 6v12"/></svg></div><h3>Braces and aligners</h3><p>Metal, ceramic and clear aligners to straighten teeth for teens and adults.</p></article>
+      <article class="svc"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3l2.5 5.5L20 9l-4 4 1 6-5-3-5 3 1-6-4-4 5.5-.5z"/></svg></div><h3>Teeth whitening</h3><p>Safe in-clinic whitening that brightens your smile by several shades in one sitting.</p></article>
+      <article class="svc"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3v10M8 13h8M10 13v8M14 13v8"/></svg></div><h3>Implants and dentures</h3><p>Replace missing teeth with fixed implants, bridges or well-fitted dentures.</p></article>
+      <article class="svc"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c1-5 15-5 16 0"/></svg></div><h3>Child dentistry</h3><p>Friendly care for kids, including fillings, sealants and fluoride treatment.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="wrap">
+    <div class="portrait" role="img" aria-label="Photo of the doctor goes here">Add doctor's photo here<br>(replace this box with an &lt;img&gt;)</div>
+    <div>
+      <h2>Meet Dr. Your Name</h2>
+      <p>BDS, MDS (Specialty). Dr. Your Name has treated thousands of patients and believes good dentistry starts with listening. Every treatment is explained in simple language before it begins, so you always know what is happening and what it costs.</p>
+      <ul>
+        <li>Registered with the State Dental Council (Reg. No. XXXXX)</li>
+        <li>Single-use needles and fully sterilised instruments</li>
+        <li>Digital X-ray with low radiation</li>
+        <li>Fixed, upfront pricing with no hidden charges</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="wrap">
+    <div class="head"><h2>What patients say</h2><p>Replace these with real reviews from your patients.</p></div>
+    <div class="grid">
+      <figure class="q"><p>I was scared of root canal, but I felt no pain at all. The doctor explained every step.</p><span>Patient name</span></figure>
+      <figure class="q"><p>Very clean clinic and fair prices. My kids actually like going for their check-ups.</p><span>Patient name</span></figure>
+      <figure class="q"><p>My braces treatment gave me the smile I always wanted. Highly recommended.</p><span>Patient name</span></figure>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap" style="max-width:760px">
+    <div class="head"><h2>Common questions</h2></div>
+    <details><summary>Is the treatment painful?</summary><p>We use local anaesthesia and gentle techniques, so most treatments are comfortable.</p></details>
+    <details><summary>How often should I visit the dentist?</summary><p>Every six months for a check-up and cleaning, or sooner if you have pain or bleeding gums.</p></details>
+    <details><summary>Do you treat dental emergencies?</summary><p>Yes. Call us and we will give you the earliest available slot.</p></details>
+    <details><summary>How much does a visit cost?</summary><p>A consultation fee applies, and we share the full treatment cost before starting.</p></details>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div>
+      <h3>Clinic hours</h3>
+      <table class="hours">
+        <tr><td>Monday to Saturday</td><td>10:00 am to 7:00 pm</td></tr>
+        <tr><td>Sunday</td><td>By appointment</td></tr>
+      </table>
+    </div>
+    <div>
+      <h3>Find us</h3>
+      <p>Clinic address, Street name, City, State, PIN code</p>
+      <p>Phone: <a href="tel:+919999999999">+91 99999 99999</a></p>
+      <p>Email: <a href="mailto:care@yourclinic.com">care@yourclinic.com</a></p>
+      <div class="map">Paste your Google Maps embed here</div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>&copy; <span id="yr"></span> Smile Care Dental Clinic. All rights reserved.</footer>
+<a class="wa" href="https://wa.me/919999999999" aria-label="Chat on WhatsApp">WhatsApp us</a>
+
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  var d = document.getElementById('date');
+  d.min = new Date().toISOString().split('T')[0];
+  document.getElementById('book').addEventListener('submit', function(e){
+    e.preventDefault();
+    var msg = 'Hello, I want to book an appointment.%0AName: ' + encodeURIComponent(document.getElementById('name').value) +
+      '%0APhone: ' + encodeURIComponent(document.getElementById('phone').value) +
+      '%0ATreatment: ' + encodeURIComponent(document.getElementById('svc').value) +
+      '%0ADate: ' + encodeURIComponent(d.value);
+    window.open('https://wa.me/919999999999?text=' + msg, '_blank');
+  });
+</script>
+</body>
+</html>
